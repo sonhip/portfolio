@@ -6,15 +6,8 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import ContactImg from "../public/assets/contact.jpg";
-import { useRouter } from "next/router";
 
 const Contact = () => {
-  const router = useRouter();
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    router.push("/thankyou");
-  };
-
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] px-2 py-16 w-full m-auto">
