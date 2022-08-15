@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 @layer base {
     body {
         @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide 
@@ -23,7 +27,28 @@
         @apply cursor-pointer
     }
 
-    button {
+    /* button {
         @apply shadow-xl shadow-gray-400  rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
-    }
+    } */
+
+    /* thank you page css */
+
+    .thankyou-wrapper{
+        width:100%;
+        height:auto;
+        margin:auto;
+        padding:10px 0px 50px;
+      }
+      .thankyou-wrapper h1{
+        font:100px Arial, Helvetica, sans-serif;
+        text-align:center;
+        color:#333333;
+        padding:0px 10px 10px;
+      }
+      .thankyou-wrapper p{
+        font:26px Arial, Helvetica, sans-serif;
+        text-align:center;
+        color:#333333;
+        padding:5px 10px 10px;
+      }
 }
