@@ -1,9 +1,9 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import propertyImg from "../public/assets/projects/property.jpg";
-import netflixImg from "../public/assets/projects/netflix.jpg";
-import cryptoImg from "../public/assets/projects/crypto.jpg";
-import twitchImg from "../public/assets/projects/twitch.jpg";
+import propertyImg from "../public/assets/projects/1.png";
+import netflixImg from "../public/assets/projects/2.png";
+import cryptoImg from "../public/assets/projects/3.png";
+import twitchImg from "../public/assets/projects/4.png";
 
 const Projects = () => {
   return (
@@ -16,27 +16,27 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
             bgImg={propertyImg}
-            title="Property"
-            skills="ReactJS"
-            url="/"
+            title="Weather App"
+            skills="ReactJS, Tailwind"
+            url="https://react-weather-app-22019.web.app/"
           />
           <ProjectItem
             bgImg={netflixImg}
-            title="Netflix"
+            title="Shopping App"
             skills="ReactJS"
-            url="/"
+            url="https://shopping-food-drink.web.app/"
           />
           <ProjectItem
             bgImg={cryptoImg}
-            title="Crypto"
-            skills="ReactJS"
-            url="/"
+            title="Blog and Portfolio"
+            skills="ReactJS, Tailwind"
+            url="https://sontranportfolio.netlify.app/post"
           />
           <ProjectItem
             bgImg={twitchImg}
-            title="Twitch"
+            title="Mini Projects"
             skills="ReactJS"
-            url="/"
+            url="https://login-eec04.web.app"
           />
         </div>
       </div>

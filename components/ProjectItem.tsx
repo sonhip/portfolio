@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -23,11 +22,11 @@ const ProjectItem = (props: Props) => {
           {title}
         </h3>
         <p className="text-white pb-4 pt-2 text-center">{skills}</p>
-        <Link href={url}>
+        <a target="_blank" rel="noopener" href={url}>
           <p className="text-center p-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
             More info
           </p>
-        </Link>
+        </a>
       </div>
     </div>
   );
