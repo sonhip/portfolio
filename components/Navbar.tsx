@@ -77,12 +77,9 @@ const Navbar = () => {
           <div>
             <div className="flex justify-between items-center">
               <Link href="/">
-                <Image
-                  src="/../public/assets/navLogo.png"
-                  alt="/"
-                  width="87"
-                  height="35"
-                />
+                <h2 className="text-[#5651e5] shadow-lg shadow-gray-400 p-2 cursor-pointer">
+                  Son Tran
+                </h2>
               </Link>
               <div
                 className="rounded-full cursor-pointer shadow-lg p-3 shadow-gray-400"
@@ -92,9 +89,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="border-b my-3 border-gray-300">
-              <p className="w-[85%] md:w-[90%] py-4">
-                Let's create something legendary!
-              </p>
+              <p className="w-[85%] md:w-[90%] py-4">Create something new!</p>
             </div>
           </div>
           <div className="py-4 flex flex-col">
