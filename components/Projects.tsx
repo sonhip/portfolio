@@ -1,9 +1,6 @@
 import React from "react";
+import { LIST_PROJECT } from "../constants/projects";
 import ProjectItem from "./ProjectItem";
-import propertyImg from "../public/assets/projects/1.png";
-import netflixImg from "../public/assets/projects/2.png";
-import cryptoImg from "../public/assets/projects/3.png";
-import twitchImg from "../public/assets/projects/4.png";
 
 const Projects = () => {
   return (
@@ -14,30 +11,15 @@ const Projects = () => {
         </p>
         <h2 className="py-4 ">What I've built</h2>
         <div className="grid md:grid-cols-2 gap-8">
-          <ProjectItem
-            bgImg={propertyImg}
-            title="Weather App"
-            skills="ReactJS, Tailwind"
-            url="https://react-weather-app-22019.web.app/"
-          />
-          <ProjectItem
-            bgImg={netflixImg}
-            title="Shopping App"
-            skills="ReactJS"
-            url="https://shopping-food-drink.web.app/"
-          />
-          <ProjectItem
-            bgImg={cryptoImg}
-            title="Blog and Portfolio"
-            skills="ReactJS, Tailwind"
-            url="https://sontranportfolio.netlify.app/post"
-          />
-          <ProjectItem
-            bgImg={twitchImg}
-            title="Mini Projects"
-            skills="ReactJS"
-            url="https://login-eec04.web.app"
-          />
+          {LIST_PROJECT.map((project) => (
+            <ProjectItem
+              key={project.title}
+              bgImg={project.bgImg}
+              title={project.title}
+              skills={project.skills}
+              url={project.url}
+            />
+          ))}
         </div>
       </div>
     </div>
