@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-// import { BsFillPersonLinesFill } from "react-icons/bs";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import profileImg from '../public/profile-pic.png';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
       if (window.scrollY >= 90) return setShadow(true);
       return setShadow(false);
     };
-    window.addEventListener("scroll", handleShadow);
+    window.addEventListener('scroll', handleShadow);
   }, []);
 
   return (
@@ -26,14 +26,26 @@ const Navbar = () => {
       //     ? "fixed w-full h-20 shadow-xl z-[100] bg-[#ecf0f3]"
       //     : "fixed w-full h-20 z-[100] bg-[#ecf0f3]"
       // }
-      className={false ? "dark:bg-red-300" : "bg-white"}
+      className={false ? 'dark:bg-red-300' : 'bg-white'}
     >
       <div className="w-full max-w-[1240px] mx-auto h-full p-2 flex justify-between items-center 2xl:px-16">
         <Link href="/">
-          <h2 className="text-[#5651e5] shadow-lg shadow-gray-400 p-2 cursor-pointer">
-            Son Tran
-          </h2>
+          <div className="flex items-center">
+            <div className="w-12 md:w-16 rounded-full overflow-hidden border border-solid border-dark dark:border-gray mr-2 md:mr-4">
+              <Image
+                src={profileImg}
+                alt="SonTran's avatar"
+                className="w-full h-auto rounded-full"
+                sizes="20vw"
+                priority
+              />
+            </div>
+            <span className="font-bold dark:font-semibold text-lg md:text-xl text-[#5651e5] cursor-pointer">
+              Son Tran
+            </span>
+          </div>
         </Link>
+
         <div>
           <ul className="hidden md:flex">
             <Link href="/">
@@ -64,14 +76,14 @@ const Navbar = () => {
 
       <div
         className={
-          nav ? "md:hidden fixed top-0 left-0 w-full h-screen bg-black/70" : ""
+          nav ? 'md:hidden fixed top-0 left-0 w-full h-screen bg-black/70' : ''
         }
       >
         <div
           className={
             nav
-              ? "fixed top-0 left-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
-              : "fixed top-0 left-[-100%] p-10 ease-in duration-500"
+              ? 'fixed top-0 left-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+              : 'fixed top-0 left-[-100%] p-10 ease-in duration-500'
           }
         >
           <div>
@@ -128,7 +140,7 @@ const Navbar = () => {
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="https://www.linkedin.com/in/tran-son-bab24216b/"
+                  href="https://www.linkedin.com/in/son-tran-bab24216b/"
                 >
                   <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <FaLinkedinIn />

@@ -1,6 +1,6 @@
-import React from "react";
-import { LIST_PROJECT } from "../constants/projects";
-import ProjectItem from "./ProjectItem";
+import React from 'react';
+import { LIST_PROJECT } from '../constants/projects';
+import ProjectItem from './ProjectItem';
 
 const Projects = () => {
   return (
